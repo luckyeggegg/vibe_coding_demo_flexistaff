@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FlexiStaff - Casual Staff Management Platform</title>
+		<meta name="description" content="Manage casual staff availability, book resources, and track schedules in one place. Designed for Australian SMEs." />
+		<link rel="stylesheet" href="./output.css" />
+		<link rel="stylesheet" href="./flexistaff-theme.css" />
+		<!-- Note: input.css removed - using compiled output.css + custom theme -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="./assets/flexistaff-favicon.svg" />
+		<style>
+			body {
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Background Decoration -->
+		<div class="bg-decoration"></div>
+
+		<!-- Navigation -->
+		<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300">
+			<a href="#" class="logo-placeholder">
+				<span class="logo-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+				</span>
+				<span>FlexiStaff</span>
+			</a>
+			<div class="hidden items-center space-x-10 md:flex">
+				<a class="transition hover:text-gray-600" href="#features">Features</a>
+				<a class="transition hover:text-gray-600" href="#get-started">Get Started</a>
+				<a class="btn btn-primary rounded-full px-6 py-2.5" href="/login">Login</a>
+			</div>
+			<button id="menu-btn" class="transition active:scale-90 md:hidden" aria-label="Open menu">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6" aria-hidden="true">
+					<path d="M4 6h16"></path>
+					<path d="M4 12h16"></path>
+					<path d="M4 18h16"></path>
+				</svg>
+			</button>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 text-lg font-medium transition duration-300 md:hidden -translate-x-full">
+			<a href="#features">Features</a>
+			<a href="#get-started">Get Started</a>
+			<a class="btn btn-primary rounded-full px-8 py-3" href="/login">Login</a>
+			<button id="close-btn" class="rounded-md p-2 mt-4 border border-gray-300" aria-label="Close menu">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M18 6 6 18"></path>
+					<path d="m6 6 12 12"></path>
+				</svg>
+			</button>
+		</div>
+
+		<main class="px-4">
+			<!-- Hero Section -->
+			<section class="hero-section flex flex-col items-center">
+				<div class="hero-tagline mt-32 md:mt-40">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M12 8V4H8"></path>
+						<rect width="16" height="12" x="4" y="8" rx="2"></rect>
+						<path d="M2 14h2"></path>
+						<path d="M20 14h2"></path>
+						<path d="M15 13v2"></path>
+						<path d="M9 13v2"></path>
+					</svg>
+					<span>Internal Use Only</span>
+				</div>
+				<h1 class="text-center text-3xl md:text-5xl lg:text-6xl mt-6 font-bold tracking-tight max-w-4xl" style="color: var(--color-text-primary); line-height: 1.1;">
+					Manage Casual Staff, Simplified
+				</h1>
+				<p class="text-center text-base md:text-lg max-w-xl mt-6" style="color: var(--color-text-secondary); line-height: 1.7;">
+					Book, track and manage casual staff availability in one place. Designed for Australian SMEs with up to 500 employees.
+				</p>
+				<div class="flex flex-col md:flex-row max-md:w-full items-center gap-4 md:gap-4 mt-8">
+					<a href="/login" class="btn btn-primary max-md:w-full rounded-full px-8 py-3.5 text-center font-medium">
+						Login to Get Started
+					</a>
+					<a href="#features" class="btn btn-secondary max-md:w-full rounded-full px-8 py-3.5 flex items-center justify-center gap-2 font-medium">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="m6 9 6 6 6-6"/>
+						</svg>
+						Learn More
+					</a>
+				</div>
+
+			<!-- Product Screenshot Placeholder -->
+			<div class="product-screenshot w-full max-w-4xl mt-20 md:mt-24 h-64 md:h-96 flex items-center justify-center">
+					<div class="text-center p-8">
+						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-text-tertiary); margin: 0 auto 16px;">
+							<rect width="18" height="18" x="3" y="3" rx="2"/>
+							<path d="M3 9h18"/>
+							<path d="M9 21V9"/>
+						</svg>
+						<p style="color: var(--color-text-tertiary); font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">
+							Dashboard Preview
+						</p>
+						<p style="color: var(--color-text-tertiary); font-size: 12px; margin-top: 8px;">
+							[Product screenshot placeholder]
+						</p>
+					</div>
+				</div>
+			</section>
+
+		<!-- Features Section -->
+		<section id="features" class="mt-32 md:mt-40">
+				<div class="text-center">
+					<h2 class="section-title text-2xl md:text-3xl font-semibold max-w-lg mx-auto">
+						What You Can Do with FlexiStaff
+					</h2>
+					<p class="section-subtitle mt-4 text-center text-sm md:text-base max-w-lg mx-auto" style="line-height: 1.7;">
+						Everything you need to manage casual staff resources efficiently and effectively.
+					</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
+					<!-- Feature 1: Real-time Availability -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-calendar">
+								<path d="M8 2v4"/>
+								<path d="M16 2v4"/>
+								<rect width="18" height="18" x="3" y="4" rx="2"/>
+								<path d="M3 10h18"/>
+								<path d="M8 14h.01"/>
+								<path d="M12 14h.01"/>
+								<path d="M16 14h.01"/>
+								<path d="M8 18h.01"/>
+								<path d="M12 18h.01"/>
+								<path d="M16 18h.01"/>
+							</svg>
+						</div>
+						<h3>Real-time Availability</h3>
+						<p>Check staff availability instantly by date, time and skills. Always know who's available when you need them.</p>
+					</div>
+
+					<!-- Feature 2: Quick Booking -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-success);">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+								<path d="m9 11 3 3L22 4"/>
+							</svg>
+						</div>
+						<h3>Quick Booking</h3>
+						<p>Book available staff with one click. Streamlined process saves time and reduces administrative overhead.</p>
+					</div>
+
+					<!-- Feature 3: Conflict Detection -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-warning);">
+								<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+								<path d="M12 9v4"/>
+								<path d="M12 17h.01"/>
+							</svg>
+						</div>
+						<h3>Conflict Detection</h3>
+						<p>Automatic scheduling conflict alerts prevent double-bookings and ensure smooth operations.</p>
+					</div>
+
+					<!-- Feature 4: Booking Management -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);">
+								<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+								<path d="m15 5 4 4"/>
+							</svg>
+						</div>
+						<h3>Booking Management</h3>
+						<p>Easily reschedule or cancel bookings. Full control over your casual staff arrangements.</p>
+					</div>
+
+					<!-- Feature 5: My Schedule -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary-dark);">
+								<circle cx="12" cy="8" r="5"/>
+								<path d="M20 21a8 8 0 0 0-16 0"/>
+							</svg>
+						</div>
+						<h3>My Schedule</h3>
+						<p>Manage your own availability with a personal dashboard. Set preferences and view upcoming assignments.</p>
+					</div>
+
+					<!-- Feature 6: Reports & Analytics -->
+					<div class="feature-card">
+						<div class="icon-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-success);">
+								<path d="M3 3v16a2 2 0 0 0 2 2h16"/>
+								<path d="m19 9-5 5-4-4-3 3"/>
+							</svg>
+						</div>
+						<h3>Reports &amp; Analytics</h3>
+						<p>Utilisation reports and insights help you make data-driven decisions about staffing resources.</p>
+					</div>
+				</div>
+			</section>
+
+		<!-- Get Started Section -->
+		<section id="get-started" class="mt-32 md:mt-40 relative">
+				<div class="text-center">
+					<h2 class="section-title text-2xl md:text-3xl font-semibold max-w-lg mx-auto">
+						Get Started in 3 Steps
+					</h2>
+				<p class="section-subtitle mt-4 text-center text-sm md:text-base max-w-xl mx-auto" style="line-height: 1.7;">
+					Start managing your casual staff resources in just a few simple steps.
+				</p>
+				</div>
+
+				<div class="relative mt-12 max-w-4xl mx-auto">
+				<!-- Steps -->
+				<div class="space-y-0">
+					<!-- Step 1 -->
+					<div class="flex items-center justify-center">
+						<div class="step-card w-full max-w-md">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="step-number text-sm" style="width: 32px; height: 32px; font-size: 14px;">1</div>
+								<h3 class="text-xl font-semibold" style="color: var(--color-text-primary);">Log In</h3>
+							</div>
+							<p style="color: var(--color-text-secondary); line-height: 1.7;">
+								Use your company credentials to access FlexiStaff. Single sign-on makes authentication seamless and secure.
+							</p>
+						</div>
+					</div>
+
+			<!-- Arrow 1 -->
+			<div style="display: flex; flex-direction: column; align-items: center; padding: 10px 0;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7C9CB5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<polyline points="19 12 12 19 5 12"></polyline>
+					</svg>
+				</div>
+
+					<!-- Step 2 -->
+					<div class="flex items-center justify-center">
+						<div class="step-card w-full max-w-md">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="step-number text-sm" style="width: 32px; height: 32px; font-size: 14px;">2</div>
+								<h3 class="text-xl font-semibold" style="color: var(--color-text-primary);">Search &amp; Book</h3>
+							</div>
+							<p style="color: var(--color-text-secondary); line-height: 1.7;">
+								Find available casual staff by date, time, and skills. Make a booking with just a few clicks.
+							</p>
+						</div>
+					</div>
+
+			<!-- Arrow 2 -->
+			<div style="display: flex; flex-direction: column; align-items: center; padding: 10px 0;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7C9CB5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<polyline points="19 12 12 19 5 12"></polyline>
+					</svg>
+				</div>
+
+					<!-- Step 3 -->
+					<div class="flex items-center justify-center">
+						<div class="step-card w-full max-w-md">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="step-number text-sm" style="width: 32px; height: 32px; font-size: 14px;">3</div>
+								<h3 class="text-xl font-semibold" style="color: var(--color-text-primary);">Confirm &amp; Track</h3>
+							</div>
+							<p style="color: var(--color-text-secondary); line-height: 1.7;">
+								Receive instant confirmation and track all your bookings in one centralised dashboard.
+							</p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- CTA Section -->
+	<div class="cta-section flex flex-col max-w-4xl px-6 md:px-12 mt-32 md:mt-40 mx-auto items-center justify-center text-center rounded-2xl" style="padding-top: 48px; padding-bottom: 48px;">
+			<h2 class="text-xl md:text-3xl font-semibold" style="color: var(--color-text-primary);">
+				Ready to streamline your staff management?
+			</h2>
+			<p class="mt-4 text-sm md:text-base max-w-2xl" style="color: var(--color-text-secondary); line-height: 1.7;">
+					Login with your company credentials to start booking casual staff today.
+				</p>
+				<a href="/login" class="btn btn-primary rounded-full px-8 py-3.5 mt-8 flex items-center gap-2 font-medium">
+					Login to Get Started
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M5 12h14"/>
+						<path d="m12 5 7 7-7 7"/>
+					</svg>
+				</a>
+			</div>
+		</main>
+
+	<!-- Footer -->
+	<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full mt-32 md:mt-40" style="padding-top: 64px;">
+			<a href="#" class="logo-placeholder">
+				<span class="logo-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+				</span>
+				<span>FlexiStaff</span>
+			</a>
+			<p class="mt-4 text-sm" style="color: var(--color-text-tertiary);">
+				Internal Use Only
+			</p>
+			<div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 py-8">
+				<a class="text-sm transition" href="#user-guide">User Guide</a>
+				<a class="text-sm transition" href="#contact-support">Contact Support</a>
+				<a class="text-sm transition" href="#privacy-policy">Privacy Policy</a>
+			</div>
+			<hr class="w-full max-w-4xl" style="border-color: var(--color-border);" />
+			<div class="flex flex-col md:flex-row items-center w-full max-w-4xl justify-center gap-2 py-6">
+				<p class="text-sm" style="color: var(--color-text-tertiary);">
+					&copy; 2026 [Company Name] - All Rights Reserved
+				</p>
+			</div>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

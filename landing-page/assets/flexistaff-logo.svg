@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Logo Icon -->
+  <rect x="4" y="8" width="32" height="32" rx="8" fill="#7C9CB5"/>
+  <g stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 29v-2a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v2"/>
+    <circle cx="18" cy="17" r="3"/>
+    <path d="M28 29v-2a4 4 0 0 0-2.5-3.7"/>
+    <path d="M23 13.5a3 3 0 0 1 0 5.8"/>
+  </g>
+
+  <!-- Logo Text -->
+  <text x="48" y="32" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" fill="#7C9CB5">
+    FlexiStaff
+  </text>
+</svg>

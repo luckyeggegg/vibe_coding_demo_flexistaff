@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:relevanceai.com)"
+      "WebFetch(domain:relevanceai.com)",
+      "Bash(curl:*)"
     ]
   }
 }
